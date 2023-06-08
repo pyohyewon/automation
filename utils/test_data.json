@@ -1,0 +1,47 @@
+{
+  "data" : {
+      "env" : [{
+            "env_name" : "local",
+            "base_url" : "http://localhost:11021/",
+            "db_connection" : "host='devdb.cnapx.net' dbname = 'korensdb' user = 'cpxapp' password = 'cpxapp!@#$' port = '21011' "
+        },
+        {
+            "env_name" : "dev",
+            "base_url" : "https://dev.XXXXXX.co.kr/",
+            "db_connection" : "host='devdb.cnapx.net' dbname = 'korensdb' user = 'cpxapp' password = 'cpxapp!@#$' port = '21011' "
+        },
+        {
+            "env_name" : "qa",
+            "base_url" : "https://qa.XXXXXX.co.kr/",
+            "db_connection" : "host='ec2-13-209-41-180.ap-northeast-2.compute.amazonaws.com' dbname = 'korensdb' user = 'cpxapp' password = 'cpxapp!@#$' port = '21011' "
+
+        },
+        {
+            "env_name" : "prod",
+            "base_url" : "https://prod.XXXXXX.co.kr/"
+
+
+        }],
+    "user" : [{
+        "role_name" : "Dev 담당자",    
+        "email" : "dev@XXXXXX.co.kr",
+        "password" : "test"
+    },
+    {
+        "role_name" : "QA 담당자",    
+        "email" : "qa@XXXXXX.co.kr",
+        "password" : "test"
+    }],
+    "predefined_values": {
+        "bookmark_permlist" : ["전체 권한", "리더", "멤버", "게스트", "미소속"],
+        "bookmark_statuslist" : ["전체 상태", "긴급", "지연", "진행", "예정", "완료", "보류"],
+        "bookmark_columnheaders" : ["상태", "프로젝트명", "기간", "관리부서", "대표리더", "권한"],
+        "mention_filterlist" : ["전체보기", "댓글", "채팅", "문서", "리포트"]
+    },    
+    "query" : {
+        "msg_sql" : "SELECT msg_job_cd, msg_cd, msg_txt, msg_type_cd, reg_dy FROM cpxown.tb_comm_msg01c",
+        "corp_sql" : "SELECT corp_nm, rpsv_nm, upjong_nm, etsr_no, chrg_clerk_nm, chrg_clerk_tel_no, memo_txt, cotr_start_dy, cotr_end_dy, reg_dy, upd_dy FROM cpxown.tb_comm_corp01m"
+    }
+  }
+}
+
